@@ -40,7 +40,8 @@ core_binary(
       "//Friends/Client:bundle-es2015.min",
       ":vendor_min",
       ":site.css",
-      ":bootstrap"
+      ":bootstrap",
+      ":runtimeconfig.template.json"
     ]
 )
 
