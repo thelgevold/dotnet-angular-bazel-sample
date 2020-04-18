@@ -1,7 +1,10 @@
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary")
 
-load("//Friends/Vendor:vendor.bzl", "vendor_bundle")
+load("//friends/Vendor:vendor.bzl", "vendor_bundle")
+load("//friends/Package:package.bzl", "deployment_package")
 load("@npm_bazel_terser//:index.bzl", "terser_minified")
+
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 
 vendor_bundle(
   name = "vendor",
@@ -39,4 +42,18 @@ core_binary(
       ":site.css",
       ":bootstrap"
     ]
+)
+
+deployment_package(
+  name = "package",
+  srcs = [
+    ":server.exe"
+  ]
+)
+
+container_image(
+    name = "app",
+    files = [":package"],
+    entrypoint = ["dotnet", "server.exe"],
+    base = "@dotnet_runtime//image"
 )
