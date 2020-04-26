@@ -65,5 +65,5 @@ container_push(
    format = "Docker",
    registry = "index.docker.io",
    repository = "thelgevold/dotnet-docker",
-   tag = "1"
+   tag = "2"
 )
