@@ -7,7 +7,7 @@ ng_module(
     srcs = glob(["*.ts"]),
     tsconfig = "//:tsconfig.json",
     deps = [
-            "//Friends/Client/Shared",
+            "//ui/Client/Shared",
             "@npm//@angular/core",
             "@npm//@angular/router",
             "@npm//@angular/forms",

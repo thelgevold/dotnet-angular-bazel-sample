@@ -6,7 +6,7 @@ pool:
   workspace:
     clean: all
 variables:
-  dockerId: $(dockerId)
+  dockerId: $(dockerUser)
 
 steps:
   - task: NodeTool@0

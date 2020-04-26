@@ -10,7 +10,7 @@ namespace Friends {
     public class ValuesController : Controller {
         [Route ("{*url}")]
         public IActionResult Index () {
-            var file = Path.Combine (Directory.GetCurrentDirectory (), "Friends/server.exe/index.html");
+            var file = Path.Combine (Directory.GetCurrentDirectory (), "ui/server.exe/index.html");
 
             return PhysicalFile (file, "text/html");
         }

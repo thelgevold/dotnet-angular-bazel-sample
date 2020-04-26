@@ -1,7 +1,7 @@
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary")
 
-load("//friends/Vendor:vendor.bzl", "vendor_bundle")
-load("//friends/Package:package.bzl", "deployment_package")
+load("//ui/Vendor:vendor.bzl", "vendor_bundle")
+load("//ui/Package:package.bzl", "deployment_package")
 load("@npm_bazel_terser//:index.bzl", "terser_minified")
 
 load("@io_bazel_rules_docker//container:container.bzl", "container_image", "container_push")
@@ -37,7 +37,7 @@ core_binary(
     ],
     data = [
       ":index.html",
-      "//Friends/Client:bundle-es2015.min",
+      "//ui/Client:bundle-es2015.min",
       ":vendor_min",
       ":site.css",
       ":bootstrap",

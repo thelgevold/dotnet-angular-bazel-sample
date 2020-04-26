@@ -10,6 +10,6 @@ ng_module(
         "@npm//@angular/core",
         "@npm//@angular/forms",
         "@npm//@angular/router",
-        "//Friends/Client/Shared",   
+        "//ui/Client/Shared",   
     ]
 )
