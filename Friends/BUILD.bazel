@@ -41,7 +41,7 @@ core_binary(
       ":vendor_min",
       ":site.css",
       ":bootstrap",
-      ":runtimeconfig.template.json"
+      ":server.runtimeconfig.json"
     ]
 )
 
