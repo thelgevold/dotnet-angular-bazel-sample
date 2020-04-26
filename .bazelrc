@@ -5,6 +5,4 @@ build --symlink_prefix=dist/
 
 build --define=angular_ivy_enabled=True
 
-build --spawn_strategy=standalone
-
 build --extra_toolchains=@rules_python//python:autodetecting_toolchain_nonstrict
