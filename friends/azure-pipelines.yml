@@ -1,0 +1,20 @@
+trigger:
+  - docker
+
+pool:
+  vmImage: 'ubuntu-16.04'
+  workspace:
+    clean: all
+variables:
+  dockerId: thelgevold
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '10.x'
+    displayName: 'Install Node.js'
+  - script: |
+      docker login -u $(dockerId) -p $(dockerPassword)
+      npm install @bazel/bazel@2.1.0
+      npm run deploy
+    displayName: 'Build and Deploy'
