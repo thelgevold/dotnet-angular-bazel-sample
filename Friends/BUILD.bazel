@@ -4,7 +4,7 @@ load("//friends/Vendor:vendor.bzl", "vendor_bundle")
 load("//friends/Package:package.bzl", "deployment_package")
 load("@npm_bazel_terser//:index.bzl", "terser_minified")
 
-load("@io_bazel_rules_docker//container:container.bzl", "container_image")
+load("@io_bazel_rules_docker//container:container.bzl", "container_image", "container_push")
 
 vendor_bundle(
   name = "vendor",
@@ -57,4 +57,13 @@ container_image(
     files = [":package"],
     entrypoint = ["dotnet", "server.exe"],
     base = "@dotnet_runtime//image"
+)
+
+container_push(
+   name = "push",
+   image = ":app",
+   format = "Docker",
+   registry = "index.docker.io",
+   repository = "thelgevold/dotnet-docker",
+   tag = "1"
 )

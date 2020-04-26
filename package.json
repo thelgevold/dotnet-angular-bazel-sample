@@ -2,7 +2,8 @@
   "name": "angular-samples",
   "scripts": {
     "start": "ibazel run //Friends:server.exe",
-    "postinstall": "ngcc"
+    "postinstall": "ngcc",
+    "deploy": "bazel run //friends:push"
   },
   "devDependencies": {
     "@angular/bazel": "9.0.0",
