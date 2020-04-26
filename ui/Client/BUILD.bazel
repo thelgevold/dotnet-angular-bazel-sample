@@ -26,7 +26,8 @@ ng_module(
             "@npm//rxjs",
             "//ui/Client/Treeview:src",
             "//ui/Client/Survey:src",
-            "//ui/Client/AddressBook:src"
+            "//ui/Client/AddressBook:src",
+            "//ui/Client/Greeting:src"
     ]
 )
 

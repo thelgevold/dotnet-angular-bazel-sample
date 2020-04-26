@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Friends.Hubs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -13,6 +14,7 @@ namespace Friends {
         public void ConfigureServices (IServiceCollection services) {
             services.AddControllers ();
             services.AddResponseCompression ();
+            services.AddSignalR ();
         }
 
         public void Configure (IApplicationBuilder app, IWebHostEnvironment env) {
@@ -30,6 +32,7 @@ namespace Friends {
             app.UseRouting ();
 
             app.UseEndpoints (endpoints => {
+                endpoints.MapHub<GreetingHub> ("/greetingHub");
                 endpoints.MapControllers ();
             });
         }
