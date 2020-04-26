@@ -6,7 +6,7 @@ pool:
   workspace:
     clean: all
 variables:
-  dockerId: thelgevold
+  dockerId: $(dockerId)
 
 steps:
   - task: NodeTool@0
@@ -16,5 +16,5 @@ steps:
   - script: |
       docker login -u $(dockerId) -p $(dockerPassword)
       npm install @bazel/bazel@2.1.0
-      npm run deploy
-    displayName: 'Build and Deploy'
+      npm run push
+    displayName: 'Build and Push'

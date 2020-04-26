@@ -3,7 +3,7 @@
   "scripts": {
     "start": "ibazel run //Friends:server.exe",
     "postinstall": "ngcc",
-    "deploy": "bazel run //friends:push"
+    "push": "bazel run //friends:push"
   },
   "devDependencies": {
     "@angular/bazel": "9.0.0",
