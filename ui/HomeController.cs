@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Friends {
     [Route ("")]
-    public class ValuesController : Controller {
+    public class HomeController : Controller {
         [Route ("{*url}")]
         public IActionResult Index () {
             var file = Path.Combine (Directory.GetCurrentDirectory (), "ui/server.exe/index.html");

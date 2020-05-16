@@ -25,7 +25,7 @@ vendor_bundle = rule(
   implementation = _vendor_bundle,
   attrs = {
     "deps": attr.label_list(allow_files = True),
-    "_concat": attr.label(default=Label("//ui/Vendor:concat"), executable=True, cfg="host", allow_files=True)
+    "_concat": attr.label(default=Label("//UI/Vendor:concat"), executable=True, cfg="host", allow_files=True)
   },    
   outputs = {"vendor": "%{name}.js"}
 )

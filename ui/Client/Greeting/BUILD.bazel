@@ -9,7 +9,7 @@ ng_module(
     tsconfig = "//:tsconfig.json",
     deps = [
         "@npm//@angular/core",
-         "//ui/Client/Shared",
+         "//UI/Client/Shared",
          "@npm//@microsoft/signalr"
     ]
 )

@@ -6,7 +6,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 git_repository(
     name = "io_bazel_rules_dotnet",
     remote = "https://github.com/bazelbuild/rules_dotnet",
-    commit = "e37a6053726e6b0a6a204489c70809739dae8f50",
+    commit = "e6415707f7e26756456d2473b9b22dfbeff66171",
 )
 
 http_archive(
@@ -51,15 +51,6 @@ yarn_install(
 
 load("@npm//:install_bazel_dependencies.bzl", "install_bazel_dependencies")
 install_bazel_dependencies()
-
-load("@npm_bazel_karma//:package.bzl", "rules_karma_dependencies")
-
-rules_karma_dependencies()
-
-# Setup the rules_webtesting toolchain
-load("@io_bazel_rules_webtesting//web:repositories.bzl", "web_test_repositories")
-
-web_test_repositories()
 
 load("@npm_bazel_typescript//:index.bzl", "ts_setup_workspace")
 

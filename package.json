@@ -3,7 +3,7 @@
   "scripts": {
     "start": "ibazel run //ui:server.exe",
     "postinstall": "ngcc",
-    "push": "bazel run //ui:push"
+    "test": "bazel test --test_output=errors //integration-tests/..."
   },
   "devDependencies": {
     "@angular/bazel": "9.0.0",
@@ -15,7 +15,6 @@
     "@bazel/ibazel": "0.11.1",
     "@bazel/typescript": "1.2.0",
     "@bazel/terser": "^1.3.0",
-    "@bazel/karma": "0.27.12",
     "@bazel/bazel": "2.1.0",
     "@babel/preset-env": "^7.6.0",
     "@bazel/rollup": "^1.3.0",

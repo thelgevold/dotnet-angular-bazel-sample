@@ -9,7 +9,7 @@ ng_module(
     assets = ["address-book.html"],
     deps = [
             "@npm//rxjs",
-            "//ui/Client/Shared",
+            "//UI/Client/Shared",
             "@npm//@angular/core",
             "@npm//@angular/common",
             "@npm//@angular/forms",

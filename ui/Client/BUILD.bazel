@@ -24,10 +24,10 @@ ng_module(
     tsconfig = "//:tsconfig.json",
     deps = ANGULAR_IMPORTS + [
             "@npm//rxjs",
-            "//ui/Client/Treeview:src",
-            "//ui/Client/Survey:src",
-            "//ui/Client/AddressBook:src",
-            "//ui/Client/Greeting:src"
+            "//UI/Client/Treeview:src",
+            "//UI/Client/Survey:src",
+            "//UI/Client/AddressBook:src",
+            "//UI/Client/Greeting:src"
     ]
 )
 
