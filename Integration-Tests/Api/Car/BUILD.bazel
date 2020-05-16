@@ -13,7 +13,6 @@ core_xunit_test(
        "@xunit.assert//:netcoreapp3.1_core",
         "@xunit.extensibility.core//:netcoreapp3.1_core",
         "@xunit.extensibility.execution//:netcoreapp3.1_core",
-        "//Api/Car:CarApi.exe",
-        "//Integration-Tests/Helpers:RequestHelper.dll"
+        "//Api/Car:CarApi.exe"
     ],
 )
