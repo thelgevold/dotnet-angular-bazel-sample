@@ -1,11 +1,11 @@
 {
   "name": "angular-samples",
   "scripts": {
-    "start": "ibazel run //ui:server.exe",
-    "postinstall": "ngcc",
-    "test": "bazel test --test_output=errors //integration-tests/..."
+    "start": "ibazel run //UI:server.exe",
+    "postinstall": "ngcc"
   },
   "devDependencies": {
+    "concurrently": "5.2.0",
     "@angular/bazel": "9.0.0",
     "@angular/compiler": "9.0.0",
     "@angular/compiler-cli": "9.0.0",

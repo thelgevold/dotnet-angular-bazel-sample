@@ -1,0 +1,19 @@
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_xunit_test")
+
+core_xunit_test(
+    name = "CarApiTests.dll",
+    #size = "medium",
+    srcs = [
+        "CarApiTests.cs",
+    ],
+    data = [
+      ":api-version.txt"    
+    ],
+    deps = [
+       "@xunit.assert//:netcoreapp3.1_core",
+        "@xunit.extensibility.core//:netcoreapp3.1_core",
+        "@xunit.extensibility.execution//:netcoreapp3.1_core",
+        "//Api/Car:CarApi.exe",
+        "//Integration-Tests/Helpers:RequestHelper.dll"
+    ],
+)

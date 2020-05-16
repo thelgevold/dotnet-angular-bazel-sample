@@ -3,19 +3,9 @@ package(default_visibility = ["//visibility:public"])
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_library")
 
 core_library(
-  name = "Friend.dll",
+  name = "RequestHelper.dll",
   srcs = [
-      "Friend.cs"
-  ],
-  deps = [
-    "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
-  ]
-)
-
-core_library(
-  name = "Car.dll",
-  srcs = [
-      "Car.cs"
+      "RequestHelper.cs"
   ],
   deps = [
     "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",

@@ -1,0 +1,17 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_binary")
+
+core_binary(
+    name = "CarApi.exe",
+    srcs = [
+      "CarController.cs",
+      "Program.cs",
+      "Startup.cs"
+    ],
+    deps = [
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:Microsoft.AspNetCore.App",
+        "@io_bazel_rules_dotnet//dotnet/stdlib.core:libraryset",
+        "//Model:Car.dll"
+    ]
+)

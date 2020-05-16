@@ -1,7 +1,7 @@
 load("@io_bazel_rules_dotnet//dotnet:defs.bzl", "core_xunit_test")
 
 core_xunit_test(
-    name = "custom_bin_test.dll",
+    name = "FriendsControllerTests.dll",
     size = "medium",
     srcs = [
         "FriendsControllerTests.cs",
@@ -10,8 +10,8 @@ core_xunit_test(
         
     ],
     deps = [
-       "@xunit.assert//:netcoreapp2.1_core",
-        "@xunit.extensibility.core//:netcoreapp2.1_core",
+       "@xunit.assert//:netcoreapp3.1_core",
+        "@xunit.extensibility.core//:netcoreapp3.1_core",
         "@xunit.extensibility.execution//:netcoreapp3.1_core",
         "//UI:server.exe",
         "//Model:Friend.dll"
