@@ -4,6 +4,5 @@ Steps to run the demo
 
 2) yarn start
 
-Tests can be run by running:
-
-./test.sh
+Blog post about incremental integration testing:
+https://www.syntaxsuccess.com/viewarticle/incremental-integration-testing-with-bazel
